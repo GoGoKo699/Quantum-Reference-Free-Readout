@@ -219,9 +219,9 @@ Compare the constructed and necessary copy budgets. The width-limited cost falls
 
 What changes when the detector reports both output signs?
 
-Derive the report product mean $`b^2z`$ from CNOT and independent detector noise. Combine it with $`bz`$ to obtain stable state estimation to precision $`\epsilon`$ using order $`\epsilon^{-2}`$ copies at width two.
+Derive the report product mean $`b^2z`$ from CNOT and independent detector noise. Combine it with $`bz`$ to obtain stable state estimation to precision $`\epsilon`$ using order $`\epsilon^{-2}`$ copies at width two. For the correlated detector, use the identity and CNOT arms to derive the moments $`\bar\kappa z^2`$ and $`\bar\kappa z`$. Explain how the same call count can give a different copy cost.
 
-**Prerequisites.** M06 M07 M19 M25. **Read.** [Worked example 4](WORKED_EXAMPLES.md#4-two-reports-change-the-scaling) · [Minimax result and proof](../science/minimax.md)
+**Prerequisites.** M06 M07 M19 M25. **Read.** [Worked example 4](WORKED_EXAMPLES.md#4-two-reports-change-the-scaling) · [Minimax result and proof](../science/minimax.md) · [Temporal parity](../science/temporal-parity.md)
 
 ### M27 From a coordinate to a qubit state
 
@@ -251,6 +251,6 @@ Connect the backward light cone of the detector to the effective copy width in t
 
 How do the circuit and the obstruction explain the same resource tradeoff?
 
-Connect single-copy ambiguity, amplification by independent copies, the matched higher-order converse, and the different gain dependence of two reports. Identify the earlier two-copy gain cancellation and state what the width-dependent result adds for this detector interface.
+Connect single-copy ambiguity, amplification by independent copies, the matched higher-order converse, and the different gain dependence of two reports. Identify the earlier two-copy gain cancellation and state what the width-dependent result adds for this detector interface. State which detector assumptions let the same copy law transfer to temporal parity.
 
 **Prerequisites.** M12 M25–M29. **Read.** [Detector model](../science/model.md) · [Minimax result and proof](../science/minimax.md) · [Control and resource bounds](../science/robustness.md) · [Related work](../science/related-work.md)
