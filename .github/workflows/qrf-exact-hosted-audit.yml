@@ -31,7 +31,7 @@ jobs:
       - name: Install the browser and reference renderer
         run: |
           npm install --prefix "$RUNNER_TEMP/math-runtime" playwright@1.56.1 mathjax-full@3.2.1
-          node "$RUNNER_TEMP/math-runtime/node_modules/playwright/cli.js" install --with-deps chromium
+          node "$RUNNER_TEMP/math-runtime/node_modules/playwright/cli.js" install chromium
       - name: Compare every commit-pinned Markdown page
         run: |
           export NODE_PATH="$RUNNER_TEMP/math-runtime/node_modules"
