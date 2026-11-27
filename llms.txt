@@ -1,0 +1,23 @@
+# Quantum Reference-Free Readout
+
+> The project studies how many copies of an unknown qubit are needed to estimate a Pauli expectation with an uncalibrated destructive detector, trusted unitary controls and a single physical binary report per controlled block.
+
+## Scientific account
+
+- [Overview](README.md): main theorem, construction and measurement-access comparison.
+- [Model and resources](science/model.md): iid state copies, affine detector response, operational restrictions and the minimax decision problem.
+- [Minimax proof](science/minimax.md): dirty-target sine compression, pilot and moment fit, adaptive relative-entropy converse and the two-report comparison.
+- [Control and implementation](science/robustness.md): gate-error budget and circuit resource account.
+- [Related work](science/related-work.md): what the earlier CNOT ratio, detector compression and polarization compression establish.
+
+## Learning
+
+- [Route](learning/README.md): entrypoint for the project-defined reading sequence and worked cases.
+- [Watrous bridge](learning/WATROUS_BRIDGE.md): one educational anchor, with source sections and translations to the measurement model.
+- [Milestones](learning/MILESTONES.md): 12 preliminaries and 18 project milestones.
+
+## Verification
+
+- [Verification guide](verification/README.md): deterministic finite checks and their coverage. Run `python3 verification/check_readout.py` from the repository root.
+
+The copy budget includes the pilot and all circuit targets. The single-report restriction counts physical detector uses, not the size of a later compressed classical record. The target is state estimation with unknown gain as a nuisance. Independent two-output detector errors give a separate two-report model.

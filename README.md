@@ -18,12 +18,14 @@ The constants depend on a fixed positive lower bound on detector gain. The scali
 
 A random output flip cancels the detector offset. A block circuit increases the slope of the response to weak polarization. Reading one compressed output or the parity of two independent outputs gives two means with a common unknown gain. Fitting these moments identifies the Pauli expectation. Repeating in three trusted bases extends the result to single-qubit tomography.
 
+The copy law also holds under a specific noisy CNOT model with independent, stationary bit flips on the physical target. The construction redirects the faults in its controlled rotations and parity gate and fits the remaining attenuation using the same source copies. For ideal nearest-neighbor circuits, a light-cone bound gives a matching depth–copy tradeoff on fixed-dimensional lattices.
+
 ## Read the science
 
 - [Model and measurement access](science/model.md) defines the detector, source, controls and charged resources.
 - [Circuit and minimax proof](science/minimax.md) gives the estimator, the adaptive lower bound and the two-report comparison.
 - [Control accuracy and circuit resources](science/robustness.md) tracks the accuracy needed for the construction and the cost of implementing it.
-- [Related work](science/related-work.md) credits the two-copy readout ratio to Lin, Wallman, Hincks and Laflamme and relates the block circuit to polarization compression.
+- [Related work](science/related-work.md) credits the two-copy readout ratio to Lin, Wallman, Hincks and Laflamme and relates the block circuit to polarization compression. See the [bibliography](references/references.bib) for citation details.
 
 ## Learn and verify
 
@@ -39,7 +41,7 @@ The [verification guide](verification/README.md) explains the checked identities
 
 ## Scope
 
-The detector is memoryless and stationary. A report comes from one application of the detector to one output qubit. Classical outcomes may guide later blocks. All source copies, including those used as temporary circuit targets, count toward the budget. The guarantee concerns the state expectation. Detector gain is unidentifiable at the maximally mixed state. The two-report comparison requires conditionally independent readout noise. The copy law assumes trusted controls, with a sufficient perturbation tolerance given separately.
+The detector is memoryless and stationary. A report comes from one application of the detector to one output qubit. Classical outcomes may guide later blocks. All source copies, including those used as temporary circuit targets, count toward the budget. The guarantee concerns the state expectation. Detector gain is unidentifiable at the maximally mixed state. The two-report comparison requires conditionally independent readout noise. The [control bounds](science/robustness.md) state the distinct assumptions for circuit depth, small generic errors, and stationary target faults.
 
 ## Purpose and contact
 

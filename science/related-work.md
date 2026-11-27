@@ -1,0 +1,17 @@
+# Related work
+
+## Preparation and measurement characterization
+
+Lin, Wallman, Hincks and Laflamme identify independent preparation and measurement parameters with trusted gates. Their single-qubit method randomizes the reported bit with an output $`X`$ flip and compares a direct ancillary readout to one after a CNOT. In Sec. III, Fig. 1 and Eqs. (8)–(11), the ancilla has independently prepared unknown polarization. If it is another copy of the source and the detector is the same, the two scored moments reduce to $`bz`$ and $`bz^2`$. That specialization is the width-two circuit used here. Their Appendix C propagates finite-sample uncertainty for that experiment. The present contribution is the uniform cost of estimation even as the source approaches zero polarization, the arbitrary-width circuit attaining the copy law, and the change in that law when a second physical report is allowed. [Independent State and Measurement Characterization for Quantum Computers](https://doi.org/10.1103/PhysRevResearch.3.033285)
+
+Xiao et al. use several known processes for simultaneous state and detector estimation. In their informationally complete setting they establish the ordinary inverse-sample mean-square rate. In their generalized-unital reconstruction, a nontrivial state observable or supplied scale information fixes the residual scaling. The present model instead fixes the available input resource to independent copies of one unknown state and treats the detector's gain as a nuisance. Copy width determines how well nonlinear measurements resolve that ambiguity. [Simultaneous estimations of quantum state and detector through multiple quantum processes](https://arxiv.org/abs/2502.11772)
+
+Brańczyk et al. estimate quantum states together with unknown rotation angles in basis-changing controls. The nuisance parameters in that work are control angles, while the nuisance here is gain and offset of a fixed affine report. [Self-calibrating quantum state tomography](https://doi.org/10.1088/1367-2630/14/8/085003)
+
+## Readout compression and polarization compression
+
+Ding et al. encode population information from a multiqubit register into one qubit to mitigate the accumulated readout error. Their implementation calls for calibrating that one detector. Their task and access model therefore differ from uniform estimation with a single uncalibrated report on a block of identical source copies. [Noise-Resistant Quantum State Compression Readout](https://doi.org/10.1007/s11433-022-2005-x)
+
+Reversible polarization compression predates this protocol. Kaye studies reversible majority on contaminated input bits for algorithmic cooling. Rodríguez-Briones and Park optimize polarization compression as a component of a heat-bath cooling protocol. The role of amplification here is to obtain two responses that share the same unknown detector gain and have different degrees in the weak signal. The sine circuit supplies this amplification with elementary controlled rotations and a target drawn from the source. [Cooling algorithms based on the 3-bit majority](https://arxiv.org/abs/quant-ph/0703194) · [Improving Quantum Machine Learning via Heat-Bath Algorithmic Cooling](https://doi.org/10.1103/24n3-tskj)
+
+The analysis uses standard concentration and binary testing tools. The specific lower-bound step matches the gain–polarization product across two hypotheses and controls the higher-degree Walsh tail of every admissible pulled-back report. The proof is given in full in the [minimax account](minimax.md).
