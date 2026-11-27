@@ -11,7 +11,7 @@ E_y=\frac{I+y(aI+bZ)}2,\qquad
 \mathbb E[Y\mid \sigma]=a+b\operatorname{Tr}(Z\sigma).
 ```
 
-A known contrast floor $`b_{\min}`$ satisfies $`0<b_{\min}<1`$. The parameter domain is $`b\ge b_{\min}`$ and $`|a|+b\le1`$. The detector is destructive and memoryless. Detector uses have fresh reporting randomness, conditional on the quantum systems being measured. The diagonal effects also describe an ideal $`Z`$ read followed by a classical binary reporting channel with conditional mean $`a+b x`$ for ideal sign $`x`$.
+A known contrast floor $`b_{\min}`$ satisfies $`0\lt b_{\min}\lt 1`$. The parameter domain is $`b\ge b_{\min}`$ and $`|a|+b\le1`$. The detector is destructive and memoryless. Detector uses have fresh reporting randomness, conditional on the quantum systems being measured. The diagonal effects also describe an ideal $`Z`$ read followed by a classical binary reporting channel with conditional mean $`a+b x`$ for ideal sign $`x`$.
 
 A one-report protocol takes a fresh block of $`k\le K`$ copies, applies any trusted unitary on those copies, calls the detector once on one selected output, and discards the other outputs. It may choose the size, gates and measured qubit by classical feedback from prior blocks. Classical randomization and postprocessing are free. It has access to the supplied copies and no prepared probe of known polarization, measurement ancilla, reset, further state-dependent report, or persistent quantum register between blocks. Each copy entering any block counts toward the total budget $`N`$.
 
@@ -28,7 +28,7 @@ N_{\mathrm{one}}(K,\epsilon)
 \right).
 ```
 
-The statement is uniform over integer $`K\ge2`$ and all sufficiently small $`\epsilon>0`$. Success means $`|\widehat z-z|\le\epsilon`$ uniformly over the unknown state and physical detector parameters. At confidence $`1-\delta`$, for $`0<\delta\le1/4`$, the two terms acquire a factor $`\log(1/\delta)`$. The optimizer may know $`K`$, $`\epsilon`$, $`\delta`$ and $`b_{\min}`$.
+The statement is uniform over integer $`K\ge2`$ and all sufficiently small $`\epsilon>0`$. Success means $`|\widehat z-z|\le\epsilon`$ uniformly over the unknown state and physical detector parameters. At confidence $`1-\delta`$, for $`0\lt \delta\le1/4`$, the two terms acquire a factor $`\log(1/\delta)`$. The optimizer may know $`K`$, $`\epsilon`$, $`\delta`$ and $`b_{\min}`$.
 
 At $`K=1`$, no number of reports gives uniform arbitrarily accurate estimates. At $`K=2`$, one report per block incurs order $`\epsilon^{-4}`$ copies. At width two with two reports per block the order is $`\epsilon^{-2}`$. The same parametric copy order is achievable with one report when width reaches order $`\epsilon^{-2}`$.
 
