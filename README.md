@@ -16,7 +16,15 @@ The constants depend on a fixed positive lower bound on detector gain. The scali
 | One report after a block of up to $`K\ge 2`$ copies | $`\Theta(\max\{\epsilon^{-2},\epsilon^{-4}/K\})`$ |
 | Two independent reports after a two-copy CNOT | $`\Theta(\epsilon^{-2})`$ |
 
-A random output flip cancels the detector offset. A block circuit increases the slope of the response to weak polarization. Reading a single compressed output in one arm and coherently combining two independent compressed outputs before one report in the other arm gives two means with a common unknown gain. Fitting these moments identifies the Pauli expectation. Repeating in three trusted bases extends the result to single-qubit tomography.
+## Estimate one Pauli expectation
+
+1. Choose a Pauli observable on the supplied qubit. Rotate each fresh copy of the same state from the chosen basis into the Z basis and independently apply I or Z with equal probability. Use a stationary memoryless detector with a known positive lower bound on its gain. At a block cap of two or three copies, acquire one set of direct single-copy readings and a second set that applies a CNOT to two copies and reads only its target.
+2. At a larger cap, use [direct pilot readings](science/minimax.md#uniform-inversion-and-adaptive-width) to choose a compressor width. Use one source copy as the target and $`m`$ copies as signal qubits. Apply CNOTs from the target to each signal. Rotate the target about Y through $`\pi/2-mt`$, then apply a $`2t`$ Y rotation to the target controlled on the one state of each signal qubit in turn. The [circuit recipe](science/minimax.md#construct-two-moments-with-one-report-per-block) sets $`t=c/\sqrt m`$ with a small constant fixed by the gain floor. In one set of blocks read a single compressor target. In a separate set run two compressors on disjoint groups, apply a CNOT between their targets and read only the CNOT target.
+3. Immediately before every detector call, including in the pilot, draw a fresh fair sign and apply X if it is negative. Multiply the reported sign by that same sign. Average the corrected reports separately for the two data sets and [fit the two means](science/minimax.md#uniform-inversion-and-adaptive-width) over the admissible gain and expectation range by minimizing the sum of absolute residuals. Use the fitted expectation. The fit is defined even when both empirical means are near zero.
+
+Discard the other outputs and keep only classical records between blocks. Charge every fresh copy, including each compressor target and the pilot copies, and one physical report per block. The compressor takes gates linear in its number of input copies. The [worked example](learning/WORKED_EXAMPLES.md#2-amplifying-the-bias-with-source-copies) follows the target rotation and moment response.
+
+Repeating in three trusted bases extends the result to single-qubit tomography.
 
 The copy law also holds under a specific noisy CNOT model with independent, stationary bit flips on the physical target. The construction redirects the faults in its controlled rotations and parity gate and fits the remaining attenuation using the same source copies. For ideal nearest-neighbor circuits, a light-cone bound gives a matching depth–copy tradeoff on fixed-dimensional lattices.
 
