@@ -1,0 +1,6 @@
+{
+  "README.md": ["Estimate one Pauli expectation"],
+  "learning/WORKED_EXAMPLES.md": ["2. Amplifying the bias with source copies", "4. Two reports change the scaling"],
+  "science/minimax.md": ["Construct two moments with one report per block", "Uniform inversion and adaptive width", "A second physical report changes the rate"],
+  "science/robustness.md": ["Circuit depth and connectivity", "Physical detector calls"]
+}
