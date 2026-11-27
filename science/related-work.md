@@ -10,7 +10,7 @@ Brańczyk et al. estimate quantum states together with unknown rotation angles i
 
 ## Temporally correlated readout
 
-Van den Berg, Minev and Temme use private bit flips to make readout act as a multiplicative factor on each parity, which they learn from a circuit initialized in the zero state. The [sister result](temporal-parity.md) combines the source-copy moments of this repository with a causal block measurement. It uses a specified temporal parity and charges both calls. The causal reduction and the matching copy bound are given in [Quantum Temporal Readout](https://github.com/GoGoKo699/Quantum-Temporal-Readout/blob/8e7b5b56458eef3ec19a5b7d3f31390ea8667dbe/science/source-only-parity.md). [Model-free readout-error mitigation for quantum expectation values](https://doi.org/10.1103/PhysRevA.105.032620)
+Van den Berg, Minev and Temme use private bit flips to make readout act as a multiplicative factor on each parity, which they learn from a circuit initialized in the zero state. The [sister result](temporal-parity.md) combines the source-copy moments of this repository with a causal block measurement. It uses a specified temporal parity and charges both calls. The causal reduction and the matching copy bound are given in [Quantum Temporal Readout](https://github.com/GoGoKo699/Quantum-Temporal-Readout/blob/318d03c3d1a0abfe7acc4c877e5b78408bdf5b08/science/source-only-parity.md). [Model-free readout-error mitigation for quantum expectation values](https://doi.org/10.1103/PhysRevA.105.032620)
 
 ## Readout compression and polarization compression
 
