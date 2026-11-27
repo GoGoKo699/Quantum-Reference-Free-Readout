@@ -20,7 +20,7 @@ x_0\cos\!\left(\frac{\pi}{2}-t\sum_i r_i\right)
 The target sign cancels on every basis input. After averaging over the source, the output expectation is
 
 ```math
-f_m(z)=\operatorname{Im}\bigl[(\cos t+i z\sin t)^m\bigr].
+f_m(z)=\mathrm{Im}\bigl[(\cos t+i z\sin t)^m\bigr].
 ```
 
 Call the detector on that target with the offset cancellation to obtain mean $`\mu=b f_m(z)`$. In a separate set of experiments, run two independent compressors on $`2m+2`$ copies, apply a CNOT between the targets, and read only its target. The measured $`Z`$ pulls back to the product of the two compressor target observables. Its mean after offset cancellation is $`\nu=b f_m(z)^2`$. Each circuit uses $`O(m)`$ elementary gates and one report. At $`K=2`$ or $`3`$, use direct readout and one CNOT parity readout, with response $`f(z)=z`$.
@@ -28,7 +28,7 @@ Call the detector on that target with the offset cancellation to obtain mean $`\
 Choose $`t=c/\sqrt m`$ for a fixed sufficiently small $`c>0`$. On $`|z|\sqrt m\le A`$ for any fixed $`A\ge1`$, the response is odd, and
 
 ```math
-f_m'(z)=m\sin(t)\operatorname{Re}\bigl[(\cos t+i z\sin t)^{m-1}\bigr]
+f_m'(z)=m\sin(t)\mathrm{Re}\bigl[(\cos t+i z\sin t)^{m-1}\bigr]
 \asymp_A\sqrt m.
 ```
 

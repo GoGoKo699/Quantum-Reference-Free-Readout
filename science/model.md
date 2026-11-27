@@ -2,13 +2,13 @@
 
 ## Experiment
 
-The source supplies independent copies of an unknown qubit state $`\rho`$. The target is the expectation $`z=\operatorname{Tr}(Z\rho)\in[-1,1]`$. Trusted single-qubit basis rotations give the same question for any specified Pauli axis.
+The source supplies independent copies of an unknown qubit state $`\rho`$. The target is the expectation $`z=\mathrm{Tr}(Z\rho)\in[-1,1]`$. Trusted single-qubit basis rotations give the same question for any specified Pauli axis.
 
 The detector has fixed, unknown parameters $`a,b`$. On a qubit in state $`\sigma`$ it returns $`Y\in\{-1,1\}`$ with effects and mean
 
 ```math
 E_y=\frac{I+y(aI+bZ)}2,\qquad
-\mathbb E[Y\mid \sigma]=a+b\operatorname{Tr}(Z\sigma).
+\mathbb E[Y\mid \sigma]=a+b\mathrm{Tr}(Z\sigma).
 ```
 
 A known contrast floor $`b_{\min}`$ satisfies $`0\lt b_{\min}\lt 1`$. The parameter domain is $`b\ge b_{\min}`$ and $`|a|+b\le1`$. The detector is destructive and memoryless. Detector uses have fresh reporting randomness, conditional on the quantum systems being measured. The diagonal effects also describe an ideal $`Z`$ read followed by a classical binary reporting channel with conditional mean $`a+b x`$ for ideal sign $`x`$.

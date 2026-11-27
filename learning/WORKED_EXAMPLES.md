@@ -24,7 +24,7 @@ x_0\cos\left(\frac{\pi}{2}-t\sum_{i=1}^3 r_i\right)
 =\sin\left(t\sum_{i=1}^3 x_i\right).
 ```
 
-Even though the target begins in another unknown copy, its input sign cancels. Averaging over the three independent signal copies gives $`f_3(z)=\operatorname{Im}[(\cos t+iz\sin t)^3]`$. Take $`t=\pi/6`$ in this example. Then
+Even though the target begins in another unknown copy, its input sign cancels. Averaging over the three independent signal copies gives $`f_3(z)=\mathrm{Im}[(\cos t+iz\sin t)^3]`$. Take $`t=\pi/6`$ in this example. Then
 
 ```math
 f_3(z)=\frac{9z-z^3}{8},

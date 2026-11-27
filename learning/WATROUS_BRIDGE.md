@@ -20,7 +20,7 @@ The book develops the toolkit for states, measurements, channel distances and in
 For Watrous's measurement effects $`\mu(a)`$ indexed by outcomes, write this project's two effects as $`E_s=(I+s(aI+bZ))/2`$, with $`s\in\{-1,+1\}`$. Here $`a`$ is the detector offset and $`b>0`$ is its gain. The two values of $`s`$ label the report; they are distinct from the detector parameter $`a`$. If the block input is $`\rho^{\otimes k}`$ and the circuit is $`U`$, the Born rule gives
 
 ```math
-\Pr(s)=\frac{1+s\left(a+b\operatorname{Tr}(M_U\rho^{\otimes k})\right)}2,
+\Pr(s)=\frac{1+s\left(a+b\mathrm{Tr}(M_U\rho^{\otimes k})\right)}2,
 \qquad M_U=U^\dagger(Z_j\otimes I_{\mathrm{rest}})U .
 ```
 
@@ -28,7 +28,7 @@ Here $`Z_j`$ denotes the ideal Pauli observable on the measured output. The unkn
 
 ## Follow the project-specific steps
 
-The source bias $`z=\operatorname{Tr}(Z\rho)`$ enters the single-copy data through a product with $`b`$. A CNOT creates a second experiment with expectation $`bz^2`$. With more copies, the local measurement sees an amplified response $`f_m(z)`$, and a separate block produces its square with the same factor $`b`$. The circuit and the pilot that chooses its working region are specific to the project. [Two-copy and amplified examples](WORKED_EXAMPLES.md#2-amplifying-the-bias-with-source-copies)
+The source bias $`z=\mathrm{Tr}(Z\rho)`$ enters the single-copy data through a product with $`b`$. A CNOT creates a second experiment with expectation $`bz^2`$. With more copies, the local measurement sees an amplified response $`f_m(z)`$, and a separate block produces its square with the same factor $`b`$. The circuit and the pilot that chooses its working region are specific to the project. [Two-copy and amplified examples](WORKED_EXAMPLES.md#2-amplifying-the-bias-with-source-copies)
 
 For the converse, choose two admissible gains and states with identical $`bz`$. The term linear in the source bias then agrees for every allowed circuit. The tensor expansion, Cauchy–Schwarz and the classical relative-entropy chain rule bound the total information from the remaining terms even under adaptive block choices. This is where the block-width dependence enters. [Matched lower bound](../science/minimax.md)
 

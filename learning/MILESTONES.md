@@ -17,7 +17,7 @@ The **12 background milestones** build the measurement model and the statistical
 
 What does the unknown source parameter describe?
 
-Read $`z=\operatorname{Tr}(Z\rho)`$ as an ideal mean of a qubit, and distinguish it from the probability of the positive outcome. A trusted basis rotation makes the same question apply to any Bloch coordinate.
+Read $`z=\mathrm{Tr}(Z\rho)`$ as an ideal mean of a qubit, and distinguish it from the probability of the positive outcome. A trusted basis rotation makes the same question apply to any Bloch coordinate.
 
 **Prerequisites.** None. **Read.** [Watrous bridge](WATROUS_BRIDGE.md) · [Detector model](../science/model.md)
 
