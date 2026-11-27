@@ -8,6 +8,7 @@
 - [Model and resources](science/model.md): iid state copies, affine detector response, operational restrictions and the minimax decision problem.
 - [Minimax proof](science/minimax.md): dirty-target sine compression, pilot and moment fit, adaptive relative-entropy converse and the two-report comparison.
 - [Control and implementation](science/robustness.md): gate-error budget and circuit resource account.
+- [Temporal parity](science/temporal-parity.md): two scheduled calls under a common parity contrast, source-only moment encoding and the comparison with independent reports.
 - [Related work](science/related-work.md): what the earlier CNOT ratio, detector compression and polarization compression establish.
 
 ## Learning

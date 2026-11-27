@@ -16,9 +16,13 @@ The constants depend on a fixed positive lower bound on detector gain. The scali
 | One report after a block of up to $`K\ge 2`$ copies | $`\Theta(\max\{\epsilon^{-2},\epsilon^{-4}/K\})`$ |
 | Two independent reports after a two-copy CNOT | $`\Theta(\epsilon^{-2})`$ |
 
-A random output flip cancels the detector offset. A block circuit increases the slope of the response to weak polarization. Reading one compressed output or the parity of two independent outputs gives two means with a common unknown gain. Fitting these moments identifies the Pauli expectation. Repeating in three trusted bases extends the result to single-qubit tomography.
+A random output flip cancels the detector offset. A block circuit increases the slope of the response to weak polarization. Reading a single compressed output in one arm and coherently combining two independent compressed outputs before one report in the other arm gives two means with a common unknown gain. Fitting these moments identifies the Pauli expectation. Repeating in three trusted bases extends the result to single-qubit tomography.
 
 The copy law also holds under a specific noisy CNOT model with independent, stationary bit flips on the physical target. The construction redirects the faults in its controlled rotations and parity gate and fits the remaining attenuation using the same source copies. For ideal nearest-neighbor circuits, a light-cone bound gives a matching depth–copy tradeoff on fixed-dimensional lattices.
+
+## Sister project
+
+[Quantum Temporal Readout](https://github.com/GoGoKo699/Quantum-Temporal-Readout) studies detectors with memory. In the shared [source-only temporal parity result](science/temporal-parity.md), two scheduled calls can each be individually blind and still carry information in their joint parity. Trusted joint preprocessing recovers the same copy scaling under a lower bound on the phase-average parity contrast. The two independent calls in the comparison above yield a different width-two rate.
 
 ## Read the science
 
@@ -41,7 +45,7 @@ The [verification guide](verification/README.md) explains the checked identities
 
 ## Scope
 
-The detector is memoryless and stationary. A report comes from one application of the detector to one output qubit. Classical outcomes may guide later blocks. All source copies, including those used as temporary circuit targets, count toward the budget. The guarantee concerns the state expectation. Detector gain is unidentifiable at the maximally mixed state. The two-report comparison requires conditionally independent readout noise. The [control bounds](science/robustness.md) state the distinct assumptions for circuit depth, small generic errors, and stationary target faults.
+The main one-report model uses a memoryless, stationary detector. A report comes from one application of the detector to one output qubit. Classical outcomes may guide later blocks. All source copies, including those used as temporary circuit targets, count toward the budget. The guarantee concerns the state expectation. Detector gain is unidentifiable at the maximally mixed state. The two-report comparison requires conditionally independent readout noise. The [control bounds](science/robustness.md) state the distinct assumptions for circuit depth, small generic errors, and stationary target faults.
 
 ## Purpose and contact
 
