@@ -1,6 +1,6 @@
 # Source-only readout with temporal parity
 
-Two calls to a detector with memory can return fair individual signs and still carry information in their product. In the [shared result](https://github.com/GoGoKo699/Quantum-Temporal-Readout/blob/8e7b5b56458eef3ec19a5b7d3f31390ea8667dbe/science/source-only-parity.md), the two moment circuits of this repository use the same temporal parity as their readout. The detector can have arbitrary causal classical or quantum memory. The protocol uses only copies of the source and trusted controls.
+Two calls to a detector with memory can return fair individual signs and still carry information in their product. In the [shared result](https://github.com/GoGoKo699/Quantum-Temporal-Readout/blob/318d03c3d1a0abfe7acc4c877e5b78408bdf5b08/science/source-only-parity.md), the two moment circuits of this repository use the same temporal parity as their readout. The detector can have arbitrary causal classical or quantum memory. The protocol uses only copies of the source and trusted controls.
 
 ## The two physical calls
 
@@ -19,4 +19,4 @@ Use a private fair coin to interleave the two choices. The masked block measurem
 
 The independent-report row uses the [stationary detector comparator](minimax.md#a-second-physical-report-changes-the-rate). In the hard instance for correlated readout, the first report is fair and independent of the pair's parity, which carries the information about $`z`$. Under separate single-copy rotations on the two slots, that parity has the same distribution at opposite polarizations along the measured axis. The pre-block CNOT makes one arm sensitive to the sign. Its action on diagonal source states suffices for the example.
 
-For arbitrary $`K\ge2`$, the correlated model has the copy law $`\Theta_{\kappa_*}(\max\{\epsilon^{-2},\epsilon^{-4}/K\})`$ at fixed confidence. The full converse covers protocols that keep both raw reports and their private controls. [Causal model, estimator and proof](https://github.com/GoGoKo699/Quantum-Temporal-Readout/blob/8e7b5b56458eef3ec19a5b7d3f31390ea8667dbe/science/source-only-parity.md)
+For arbitrary $`K\ge2`$, the correlated model has the copy law $`\Theta_{\kappa_*}(\max\{\epsilon^{-2},\epsilon^{-4}/K\})`$ at fixed confidence. The full converse covers protocols that keep both raw reports and their private controls. [Causal model, estimator and proof](https://github.com/GoGoKo699/Quantum-Temporal-Readout/blob/318d03c3d1a0abfe7acc4c877e5b78408bdf5b08/science/source-only-parity.md)
